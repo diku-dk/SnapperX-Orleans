@@ -1,0 +1,13 @@
+# ignore all build files
+*/bin/
+*/obj/
+
+# ignore all files in the log folder
+data/log/
+data/result.txt
+data/replica.txt
+data/snapper-ami.pem
+data/AWS_credential.txt
+
+# ignore visual studio cache
+.vs

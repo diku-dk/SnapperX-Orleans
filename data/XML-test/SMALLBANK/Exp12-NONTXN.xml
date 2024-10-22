@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <!-- ======================================================= -->
+    <numGrainPerTxn>            4   </numGrainPerTxn>
+
+    <!-- ======================================================= -->
+    <MultiTransfer>             100 </MultiTransfer>
+    <RegisterUpdateReference>   0   </RegisterUpdateReference>
+    <DeRegisterUpdateReference> 0   </DeRegisterUpdateReference>
+    <RegisterDeleteReference>   0   </RegisterDeleteReference>
+    <DeRegisterDeleteReference> 0   </DeRegisterDeleteReference>
+
+    <!-- ======================================================= -->
+    <numPartitionPerSiloPerTxn> 1   </numPartitionPerSiloPerTxn>
+    <numSiloPerTxn>             2   </numSiloPerTxn>
+    <numRegionPerTxn>           1   </numRegionPerTxn>
+
+    <!-- ======================================================= -->
+    <pactPercent>               0   </pactPercent>             <!-- with random references, it is impossible to run a transaction as PACT -->
+    <multiSiloPercent>          50  </multiSiloPercent>
+    <multiRegionPercent>        0   </multiRegionPercent>
+
+    <!-- ======================================================= -->
+    <hotGrainPercent>           100 </hotGrainPercent>
+    <hotPercentPerPartition>    100 </hotPercentPerPartition>
+
+    <!-- ======================================================= -->
+    <actPipeSize>               128 </actPipeSize>
+    <pactPipeSize>              128 </pactPipeSize>
+    <numActConsumer>            2   </numActConsumer>
+    <numPactConsumer>           2   </numPactConsumer>
+
+    <migrationPipeSize>         2   </migrationPipeSize>
+    <numMigrationConsumer>      1   </numMigrationConsumer>
+</root>

@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<RuntimeIdentifiers>win</RuntimeIdentifiers>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<!--- Configure garbage collection "just right" for orleans: http://dotnet.github.io/orleans/Documentation/Deployment-and-Operations/Configuration-Guide/Configuring-.NET-Garbage-Collection.html -->
+	<PropertyGroup>
+		<ServerGarbageCollection>true</ServerGarbageCollection>
+		<ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NetMQ" Version="4.0.1.13" />
+		<PackageReference Include="StackExchange.Redis" Version="2.7.33" />
+		<PackageReference Include="OrleansDashboard" Version="8.0.0" />
+		<PackageReference Include="AWSSDK.Core" Version="3.7.304.17" />
+		<PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.303.23" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Orleans.Server" Version="8.1.0" />
+		<PackageReference Include="Microsoft.Orleans.Clustering.DynamoDB" Version="8.1.0" />
+		<PackageReference Include="Microsoft.Orleans.Transactions" Version="8.1.0" />
+		<PackageReference Include="Microsoft.Orleans.GrainDirectory.Redis" Version="8.1.0" />
+		<PackageReference Include="Microsoft.Orleans.Streaming" Version="8.1.0" />
+		<PackageReference Include="Confluent.Kafka" Version="2.4.0" />
+		<PackageReference Include="Microsoft.Orleans.BroadcastChannel" Version="8.1.0" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\Concurrency.Implementation\Concurrency.Implementation.csproj" />
+		<ProjectReference Include="..\Concurrency.Interface\Concurrency.Interface.csproj" />
+		<ProjectReference Include="..\Concurrency.Common\Concurrency.Common.csproj" />
+		<ProjectReference Include="..\MarketPlace.Grains\MarketPlace.Grains.csproj" />
+		<ProjectReference Include="..\MarketPlace.Interfaces\MarketPlace.Interfaces.csproj" />
+		<ProjectReference Include="..\MarketPlace.Workload\MarketPlace.Workload.csproj" />
+		<ProjectReference Include="..\Replication.Implementation\Replication.Implementation.csproj" />
+		<ProjectReference Include="..\Replication.Interface\Replication.Interface.csproj" />
+		<ProjectReference Include="..\SmallBank.Grains\SmallBank.Grains.csproj" />
+		<ProjectReference Include="..\SmallBank.Interfaces\SmallBank.Interfaces.csproj" />
+		<ProjectReference Include="..\SmallBank.Workload\SmallBank.Workload.csproj" />
+		<ProjectReference Include="..\Utilities\Utilities.csproj" />
+	</ItemGroup>
+	
+</Project>

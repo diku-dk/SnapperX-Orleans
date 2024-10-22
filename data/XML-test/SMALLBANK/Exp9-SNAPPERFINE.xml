@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <!-- ======================================================= -->
+    <numGrainPerTxn>            4   </numGrainPerTxn>
+
+    <!-- ======================================================= -->
+    <MultiTransfer>             60  </MultiTransfer>
+    <RegisterUpdateReference>   10  </RegisterUpdateReference>
+    <DeRegisterUpdateReference> 10  </DeRegisterUpdateReference>     <!-- remove follower key with update reference -->
+    <RegisterDeleteReference>   10  </RegisterDeleteReference>
+    <DeRegisterDeleteReference> 10  </DeRegisterDeleteReference>     <!-- remove follower key with delete reference -->
+
+    <!-- ======================================================= -->
+    <numPartitionPerSiloPerTxn> 1   </numPartitionPerSiloPerTxn>
+    <numSiloPerTxn>             2   </numSiloPerTxn>
+    <numRegionPerTxn>           1   </numRegionPerTxn>
+
+    <!-- ======================================================= -->
+    <pactPercent>               0   </pactPercent>            <!-- PACT% must be 0 with reference registered -->    
+    <multiSiloPercent>          50  </multiSiloPercent>
+    <multiRegionPercent>        0   </multiRegionPercent>
+
+    <!-- ======================================================= -->
+    <hotGrainPercent>           100 </hotGrainPercent>
+    <hotPercentPerPartition>    100 </hotPercentPerPartition>
+
+    <!-- ======================================================= -->
+    <actPipeSize>               128 </actPipeSize>
+    <pactPipeSize>              128 </pactPipeSize>
+    <numActConsumer>            2   </numActConsumer>
+    <numPactConsumer>           2   </numPactConsumer>
+</root>

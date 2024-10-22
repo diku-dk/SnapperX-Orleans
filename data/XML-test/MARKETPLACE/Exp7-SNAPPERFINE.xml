@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <!-- ======================================================= -->
+    <AddItemToCart>              10  </AddItemToCart>
+    <DeleteItemInCart>           10  </DeleteItemInCart>
+    <Checkout>                   50  </Checkout>
+
+    <UpdatePrice>                10  </UpdatePrice>
+    <DeleteProduct>              5   </DeleteProduct>
+    <AddProducts>                5   </AddProducts>
+    <ReplenishStock>             5   </ReplenishStock>    <!-- add stock for a product that already exists -->
+    <AddStock>                   5   </AddStock>          <!-- add stock for a new product -->
+
+    <!-- ============== add item txn setting =================== -->
+    <hotProductPercent>          100 </hotProductPercent>
+    <hotPercentPerSeller>        100 </hotPercentPerSeller>
+    
+    <!-- ============== checkout txn setting =================== -->
+    <maxNumProductPerCheckout>   5   </maxNumProductPerCheckout>
+    <maxQuantityToBuyPerProduct> 5   </maxQuantityToBuyPerProduct>
+
+    <!-- ======================================================= -->
+    <pactPercent>                50 </pactPercent>     <!-- run a transaction as PACT if it can -->
+    
+    <!-- ======================================================= -->
+    <actPipeSize>                128 </actPipeSize>
+    <pactPipeSize>               128 </pactPipeSize>
+    <numActConsumer>             2   </numActConsumer>
+    <numPactConsumer>            2   </numPactConsumer>
+</root>

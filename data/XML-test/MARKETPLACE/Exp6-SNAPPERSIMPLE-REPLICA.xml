@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <!-- ======================================================= -->
+    <RefreshSellerDashboard> 100 </RefreshSellerDashboard>
+
+    <!-- ======================================================= -->
+    <pactPercent>            50   </pactPercent>
+    
+    <!-- ======================================================= -->
+    <actPipeSize>            128  </actPipeSize>
+    <pactPipeSize>           128  </pactPipeSize>
+    <numActConsumer>         2   </numActConsumer>
+    <numPactConsumer>        2   </numPactConsumer>
+</root>

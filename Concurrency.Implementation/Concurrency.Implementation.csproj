@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ServerGarbageCollection>true</ServerGarbageCollection>
+		<ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.303.23" />
+		<PackageReference Include="MessagePack" Version="2.5.168" />
+		<PackageReference Include="Microsoft.Orleans.Sdk" Version="8.1.0" />
+		<PackageReference Include="StackExchange.Redis" Version="2.7.33" />
+		<PackageReference Include="Microsoft.Orleans.Streaming " Version="7.2.3" />
+		<PackageReference Include="Microsoft.Orleans.BroadcastChannel" Version="8.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Concurrency.Interface\Concurrency.Interface.csproj" />
+		<ProjectReference Include="..\Concurrency.Common\Concurrency.Common.csproj" />
+		<ProjectReference Include="..\Replication.Interface\Replication.Interface.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Update="Microsoft.Orleans.Streaming" Version="8.1.0" />
+	</ItemGroup>
+
+</Project>

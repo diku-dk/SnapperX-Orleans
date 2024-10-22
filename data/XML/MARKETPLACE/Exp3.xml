@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <!-- ======================================================= -->
+    <AddItemToCart>              20 </AddItemToCart>
+    <DeleteItemInCart>           10 </DeleteItemInCart>
+    <Checkout>                   60 </Checkout>
+
+    <UpdatePrice>                5  </UpdatePrice>
+    <DeleteProduct>              0  </DeleteProduct>
+    <AddProducts>                0  </AddProducts>
+    <ReplenishStock>             0  </ReplenishStock>       <!-- add stock for a product that already exists -->
+    <AddStock>                   0  </AddStock>             <!-- add stock for a new product -->
+
+    <!-- ================== txn setting ======================== -->
+    <hotCustomerPercent>         75 </hotCustomerPercent>   <!-- the percentage that a hot customer is selected -->
+    <hotCustomerPerCity>         5  </hotCustomerPerCity>   <!-- the number of hot customers among all customers in each city -->
+
+    <hotSellerPercent>           75 </hotSellerPercent>     <!-- the percentage that a hot seller is selected -->
+    <hotSellerPerCity>           5  </hotSellerPerCity>     <!-- the number of hot sellers among all sellers in each city -->
+    
+    <hotProductPercent>          75 </hotProductPercent>    <!-- the percentage that a hot product is selected -->
+    <hotProductPerSeller>        5  </hotProductPerSeller>  <!-- the number of hot products among all products of each seller -->
+
+    <maxNumProductPerCheckout>   1  </maxNumProductPerCheckout>
+    <maxQuantityToBuyPerProduct> 5  </maxQuantityToBuyPerProduct>
+
+    <!-- ======================================================= -->
+    <pactPercent>                100 </pactPercent>          <!-- run a transaction as PACT if it can -->
+    <multiSiloPercent>           100 </multiSiloPercent>
+    
+    <!-- ======================================================= -->
+    <actPipeSize>                128 </actPipeSize>
+    <pactPipeSize>               128 </pactPipeSize>
+    <numActConsumer>             1   </numActConsumer>
+    <numPactConsumer>            1   </numPactConsumer>
+</root>

@@ -1,0 +1,11 @@
+# docker stop redis_snapper
+# docker rm redis_snapper
+# docker compose up -d
+
+version: '3.8'
+services:
+  redis_snapper:
+    image: redis
+    container_name: redis_snapper
+    ports:
+      - "6379:6379"

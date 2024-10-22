@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <runExperiment> 5 </runExperiment>
+
+    <experimentID id = '1'>
+        <isLocalTest>                    true      </isLocalTest>
+        <isGrainMigrationExp>            false     </isGrainMigrationExp>
+        <numRegion>                      1         </numRegion>
+        <numSiloPerRegion>               2         </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2         </numReplicaSiloPerRegion>
+        <benchmark>                      SMALLBANK </benchmark>
+        <implementationType>             SNAPPER   </implementationType>
+        <doLogging>                      false     </doLogging>
+        <inRegionReplication>            true      </inRegionReplication>
+        <crossRegionReplication>         false     </crossRegionReplication>
+        <replicaWorkload>                true      </replicaWorkload>
+        <speculativeACT>                 false     </speculativeACT>
+        <speculativeBatch>               true      </speculativeBatch>
+        <globalBatchSizeInMSecs>         80        </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40        </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20        </localBatchSizeInMSecs>
+
+        <numMasterPartitionPerLocalSilo> 2         </numMasterPartitionPerLocalSilo>
+        <numGrainPerPartition>           1000      </numGrainPerPartition>
+        <numAccountPerGrain>             10        </numAccountPerGrain>
+    </experimentID>
+
+    <experimentID id = '2'>
+        <isLocalTest>                    true        </isLocalTest>
+        <isGrainMigrationExp>            false       </isGrainMigrationExp>
+        <numRegion>                      1           </numRegion>
+        <numSiloPerRegion>               2           </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2           </numReplicaSiloPerRegion>
+        <benchmark>                      MARKETPLACE </benchmark>
+        <implementationType>             SNAPPER     </implementationType>
+        <doLogging>                      false       </doLogging>
+        <inRegionReplication>            true        </inRegionReplication>
+        <crossRegionReplication>         false       </crossRegionReplication>
+        <replicaWorkload>                true        </replicaWorkload>
+        <speculativeACT>                 false       </speculativeACT>
+        <speculativeBatch>               true        </speculativeBatch>
+        <globalBatchSizeInMSecs>         80          </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40          </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20          </localBatchSizeInMSecs>
+
+        <numCityPerSilo>                 2           </numCityPerSilo>
+        <numCustomerPerCity>             100         </numCustomerPerCity>
+        <totalNumSeller>                 100         </totalNumSeller>
+        <numProductPerSeller>            10          </numProductPerSeller>
+
+        <numRegionPerSeller>             1           </numRegionPerSeller>
+        <numSiloPerSeller>               2           </numSiloPerSeller>
+        <numCityPerSeller>               2           </numCityPerSeller>
+        <numProductPerStockCity>         10          </numProductPerStockCity>
+    
+        <initialNumProductPerCart>       2           </initialNumProductPerCart>
+
+        <maxPricePerProduct>             100000      </maxPricePerProduct>
+        <maxQuantityInStockPerProduct>   10000000    </maxQuantityInStockPerProduct>
+    </experimentID>
+
+    <experimentID id = '3'>
+        <isLocalTest>                    true      </isLocalTest>
+        <isGrainMigrationExp>            true      </isGrainMigrationExp>    <!-- must do replication by sending events instead of giving actor calls directly -->
+        <numRegion>                      1         </numRegion>
+        <numSiloPerRegion>               2         </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2         </numReplicaSiloPerRegion>
+        <benchmark>                      SMALLBANK </benchmark>
+        <implementationType>             SNAPPER   </implementationType>
+        <doLogging>                      false     </doLogging>
+        <inRegionReplication>            true      </inRegionReplication>
+        <crossRegionReplication>         false     </crossRegionReplication>
+        <replicaWorkload>                true      </replicaWorkload>
+        <speculativeACT>                 false     </speculativeACT>
+        <speculativeBatch>               true      </speculativeBatch>
+        <globalBatchSizeInMSecs>         80        </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40        </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20        </localBatchSizeInMSecs>
+
+        <numMasterPartitionPerLocalSilo> 2         </numMasterPartitionPerLocalSilo>
+        <numGrainPerPartition>           1000      </numGrainPerPartition>
+        <numAccountPerGrain>             10        </numAccountPerGrain>
+    </experimentID>
+
+    <experimentID id = '4'>
+        <isLocalTest>                    true        </isLocalTest>
+        <isGrainMigrationExp>            false       </isGrainMigrationExp>
+        <numRegion>                      1           </numRegion>
+        <numSiloPerRegion>               2           </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2           </numReplicaSiloPerRegion>
+        <benchmark>                      MARKETPLACE </benchmark>
+        <implementationType>             ORLEANSTXN  </implementationType>
+        <doLogging>                      false       </doLogging>
+        <inRegionReplication>            false       </inRegionReplication>
+        <crossRegionReplication>         false       </crossRegionReplication>
+        <replicaWorkload>                false       </replicaWorkload>
+        <speculativeACT>                 false       </speculativeACT>
+        <speculativeBatch>               true        </speculativeBatch>
+        <globalBatchSizeInMSecs>         80          </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40          </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20          </localBatchSizeInMSecs>
+
+        <numCityPerSilo>                 2           </numCityPerSilo>
+        <numCustomerPerCity>             100         </numCustomerPerCity>
+        <totalNumSeller>                 100         </totalNumSeller>
+        <numProductPerSeller>            10          </numProductPerSeller>
+
+        <numRegionPerSeller>             1           </numRegionPerSeller>
+        <numSiloPerSeller>               2           </numSiloPerSeller>
+        <numCityPerSeller>               2           </numCityPerSeller>
+        <numProductPerStockCity>         10          </numProductPerStockCity>
+    
+        <initialNumProductPerCart>       2           </initialNumProductPerCart>
+
+        <maxPricePerProduct>             100000      </maxPricePerProduct>
+        <maxQuantityInStockPerProduct>   10000000    </maxQuantityInStockPerProduct>
+    </experimentID>
+
+    <experimentID id = '5'>
+        <isLocalTest>                    true        </isLocalTest>
+        <isGrainMigrationExp>            false       </isGrainMigrationExp>
+        <numRegion>                      1           </numRegion>
+        <numSiloPerRegion>               2           </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2           </numReplicaSiloPerRegion>
+        <benchmark>                      MARKETPLACE </benchmark>
+        <implementationType>             NONTXN      </implementationType>
+        <doLogging>                      false       </doLogging>
+        <inRegionReplication>            false       </inRegionReplication>
+        <crossRegionReplication>         false       </crossRegionReplication>
+        <replicaWorkload>                false       </replicaWorkload>
+        <speculativeACT>                 false       </speculativeACT>
+        <speculativeBatch>               true        </speculativeBatch>
+        <globalBatchSizeInMSecs>         80          </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40          </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20          </localBatchSizeInMSecs>
+
+        <numCityPerSilo>                 2           </numCityPerSilo>
+        <numCustomerPerCity>             100         </numCustomerPerCity>
+        <totalNumSeller>                 100         </totalNumSeller>
+        <numProductPerSeller>            10          </numProductPerSeller>
+
+        <numRegionPerSeller>             1           </numRegionPerSeller>
+        <numSiloPerSeller>               2           </numSiloPerSeller>
+        <numCityPerSeller>               2           </numCityPerSeller>
+        <numProductPerStockCity>         10          </numProductPerStockCity>
+    
+        <initialNumProductPerCart>       2           </initialNumProductPerCart>
+
+        <maxPricePerProduct>             100000      </maxPricePerProduct>
+        <maxQuantityInStockPerProduct>   10000000    </maxQuantityInStockPerProduct>
+    </experimentID>
+
+    <experimentID id = '6'>
+        <isLocalTest>                    true          </isLocalTest>
+        <isGrainMigrationExp>            false         </isGrainMigrationExp>
+        <numRegion>                      1             </numRegion>
+        <numSiloPerRegion>               2             </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2             </numReplicaSiloPerRegion>
+        <benchmark>                      MARKETPLACE   </benchmark>
+        <implementationType>             SNAPPERSIMPLE </implementationType>
+        <doLogging>                      false         </doLogging>
+        <inRegionReplication>            false         </inRegionReplication>
+        <crossRegionReplication>         false         </crossRegionReplication>
+        <replicaWorkload>                false         </replicaWorkload>
+        <speculativeACT>                 false         </speculativeACT>
+        <speculativeBatch>               true          </speculativeBatch>
+        <globalBatchSizeInMSecs>         80            </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40            </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20            </localBatchSizeInMSecs>
+
+        <numCityPerSilo>                 2             </numCityPerSilo>
+        <numCustomerPerCity>             100           </numCustomerPerCity>
+        <totalNumSeller>                 100           </totalNumSeller>
+        <numProductPerSeller>            10            </numProductPerSeller>
+
+        <numRegionPerSeller>             1             </numRegionPerSeller>
+        <numSiloPerSeller>               2             </numSiloPerSeller>
+        <numCityPerSeller>               2             </numCityPerSeller>
+        <numProductPerStockCity>         10            </numProductPerStockCity>
+    
+        <initialNumProductPerCart>       2             </initialNumProductPerCart>
+
+        <maxPricePerProduct>             100000        </maxPricePerProduct>
+        <maxQuantityInStockPerProduct>   10000000      </maxQuantityInStockPerProduct>
+    </experimentID>
+
+    <experimentID id = '7'>
+        <isLocalTest>                    true        </isLocalTest>
+        <isGrainMigrationExp>            false       </isGrainMigrationExp>
+        <numRegion>                      1           </numRegion>
+        <numSiloPerRegion>               2           </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2           </numReplicaSiloPerRegion>
+        <benchmark>                      MARKETPLACE </benchmark>
+        <implementationType>             SNAPPERFINE </implementationType>
+        <doLogging>                      false       </doLogging>
+        <inRegionReplication>            false       </inRegionReplication>
+        <crossRegionReplication>         false       </crossRegionReplication>
+        <replicaWorkload>                false       </replicaWorkload>
+        <speculativeACT>                 false       </speculativeACT>
+        <speculativeBatch>               true        </speculativeBatch>
+        <globalBatchSizeInMSecs>         80          </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40          </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20          </localBatchSizeInMSecs>
+
+        <numCityPerSilo>                 2           </numCityPerSilo>
+        <numCustomerPerCity>             100         </numCustomerPerCity>
+        <totalNumSeller>                 100         </totalNumSeller>
+        <numProductPerSeller>            10          </numProductPerSeller>
+
+        <numRegionPerSeller>             1           </numRegionPerSeller>
+        <numSiloPerSeller>               2           </numSiloPerSeller>
+        <numCityPerSeller>               2           </numCityPerSeller>
+        <numProductPerStockCity>         10          </numProductPerStockCity>
+    
+        <initialNumProductPerCart>       2           </initialNumProductPerCart>
+
+        <maxPricePerProduct>             100000      </maxPricePerProduct>
+        <maxQuantityInStockPerProduct>   10000000    </maxQuantityInStockPerProduct>
+    </experimentID>
+
+    <experimentID id = '8'>
+        <isLocalTest>                    true        </isLocalTest>
+        <isGrainMigrationExp>            false       </isGrainMigrationExp>
+        <numRegion>                      1           </numRegion>
+        <numSiloPerRegion>               2           </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2           </numReplicaSiloPerRegion>
+        <benchmark>                      MARKETPLACE </benchmark>
+        <implementationType>             NONTXNKV    </implementationType>
+        <doLogging>                      false       </doLogging>
+        <inRegionReplication>            false       </inRegionReplication>
+        <crossRegionReplication>         false       </crossRegionReplication>
+        <replicaWorkload>                false       </replicaWorkload>
+        <speculativeACT>                 false       </speculativeACT>
+        <speculativeBatch>               true        </speculativeBatch>
+        <globalBatchSizeInMSecs>         80          </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40          </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20          </localBatchSizeInMSecs>
+
+        <numCityPerSilo>                 2           </numCityPerSilo>
+        <numCustomerPerCity>             100         </numCustomerPerCity>
+        <totalNumSeller>                 100         </totalNumSeller>
+        <numProductPerSeller>            10          </numProductPerSeller>
+
+        <numRegionPerSeller>             1           </numRegionPerSeller>
+        <numSiloPerSeller>               2           </numSiloPerSeller>
+        <numCityPerSeller>               2           </numCityPerSeller>
+        <numProductPerStockCity>         10          </numProductPerStockCity>
+    
+        <initialNumProductPerCart>       2           </initialNumProductPerCart>
+
+        <maxPricePerProduct>             100000      </maxPricePerProduct>
+        <maxQuantityInStockPerProduct>   10000000    </maxQuantityInStockPerProduct>
+    </experimentID>
+
+    <experimentID id = '9'>
+        <isLocalTest>                    true        </isLocalTest>
+        <isGrainMigrationExp>            false       </isGrainMigrationExp>
+        <numRegion>                      1           </numRegion>
+        <numSiloPerRegion>               2           </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2           </numReplicaSiloPerRegion>
+        <benchmark>                      SMALLBANK   </benchmark>
+        <implementationType>             SNAPPERFINE </implementationType>
+        <doLogging>                      false       </doLogging>
+        <inRegionReplication>            false       </inRegionReplication>
+        <crossRegionReplication>         false       </crossRegionReplication>
+        <replicaWorkload>                false       </replicaWorkload>
+        <speculativeACT>                 false       </speculativeACT>
+        <speculativeBatch>               true        </speculativeBatch>
+        <globalBatchSizeInMSecs>         80          </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40          </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20          </localBatchSizeInMSecs>
+
+        <numMasterPartitionPerLocalSilo> 2           </numMasterPartitionPerLocalSilo>
+        <numGrainPerPartition>           1000        </numGrainPerPartition>
+        <numAccountPerGrain>             10          </numAccountPerGrain>
+    </experimentID>
+
+    <experimentID id = '10'>
+        <isLocalTest>                    true          </isLocalTest>
+        <isGrainMigrationExp>            false         </isGrainMigrationExp>
+        <numRegion>                      1             </numRegion>
+        <numSiloPerRegion>               2             </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2             </numReplicaSiloPerRegion>
+        <benchmark>                      SMALLBANK     </benchmark>
+        <implementationType>             SNAPPERSIMPLE </implementationType>
+        <doLogging>                      false         </doLogging>
+        <inRegionReplication>            false         </inRegionReplication>
+        <crossRegionReplication>         false         </crossRegionReplication>
+        <replicaWorkload>                false         </replicaWorkload>
+        <speculativeACT>                 false         </speculativeACT>
+        <speculativeBatch>               true          </speculativeBatch>
+        <globalBatchSizeInMSecs>         80            </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40            </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20            </localBatchSizeInMSecs>
+
+        <numMasterPartitionPerLocalSilo> 2             </numMasterPartitionPerLocalSilo>
+        <numGrainPerPartition>           1000          </numGrainPerPartition>
+        <numAccountPerGrain>             10            </numAccountPerGrain>
+    </experimentID>
+
+    <experimentID id = '11'>
+        <isLocalTest>                    true       </isLocalTest>
+        <isGrainMigrationExp>            false      </isGrainMigrationExp>
+        <numRegion>                      1          </numRegion>
+        <numSiloPerRegion>               2          </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2          </numReplicaSiloPerRegion>
+        <benchmark>                      SMALLBANK  </benchmark>
+        <implementationType>             ORLEANSTXN </implementationType>
+        <doLogging>                      false      </doLogging>
+        <inRegionReplication>            false      </inRegionReplication>
+        <crossRegionReplication>         false      </crossRegionReplication>
+        <replicaWorkload>                false      </replicaWorkload>
+        <speculativeACT>                 false      </speculativeACT>
+        <speculativeBatch>               true       </speculativeBatch>
+        <globalBatchSizeInMSecs>         80         </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40         </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20         </localBatchSizeInMSecs>
+
+        <numMasterPartitionPerLocalSilo> 2          </numMasterPartitionPerLocalSilo>
+        <numGrainPerPartition>           1000       </numGrainPerPartition>
+        <numAccountPerGrain>             10         </numAccountPerGrain>
+    </experimentID>
+
+    <experimentID id = '12'>
+        <isLocalTest>                    true      </isLocalTest>
+        <isGrainMigrationExp>            false     </isGrainMigrationExp>
+        <numRegion>                      1         </numRegion>
+        <numSiloPerRegion>               2         </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2         </numReplicaSiloPerRegion>
+        <benchmark>                      SMALLBANK </benchmark>
+        <implementationType>             NONTXN    </implementationType>
+        <doLogging>                      false     </doLogging>
+        <inRegionReplication>            false     </inRegionReplication>
+        <crossRegionReplication>         false     </crossRegionReplication>
+        <replicaWorkload>                false     </replicaWorkload>
+        <speculativeACT>                 false     </speculativeACT>
+        <speculativeBatch>               true      </speculativeBatch>
+        <globalBatchSizeInMSecs>         80        </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40        </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20        </localBatchSizeInMSecs>
+
+        <numMasterPartitionPerLocalSilo> 2         </numMasterPartitionPerLocalSilo>
+        <numGrainPerPartition>           1000      </numGrainPerPartition>
+        <numAccountPerGrain>             10        </numAccountPerGrain>
+    </experimentID>
+
+    <experimentID id = '13'>
+        <isLocalTest>                    true      </isLocalTest>
+        <isGrainMigrationExp>            false     </isGrainMigrationExp>
+        <numRegion>                      1         </numRegion>
+        <numSiloPerRegion>               2         </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2         </numReplicaSiloPerRegion>
+        <benchmark>                      SMALLBANK </benchmark>
+        <implementationType>             NONTXNKV  </implementationType>
+        <doLogging>                      false     </doLogging>
+        <inRegionReplication>            false     </inRegionReplication>
+        <crossRegionReplication>         false     </crossRegionReplication>
+        <replicaWorkload>                false     </replicaWorkload>
+        <speculativeACT>                 false     </speculativeACT>
+        <speculativeBatch>               true      </speculativeBatch>
+        <globalBatchSizeInMSecs>         80        </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       40        </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          20        </localBatchSizeInMSecs>
+
+        <numMasterPartitionPerLocalSilo> 2         </numMasterPartitionPerLocalSilo>
+        <numGrainPerPartition>           1000      </numGrainPerPartition>
+        <numAccountPerGrain>             10        </numAccountPerGrain>
+    </experimentID>
+    
+</root>

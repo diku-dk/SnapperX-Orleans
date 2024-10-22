@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <!-- ======================================================= -->
+
+    <numGrainPerTxn>             4 </numGrainPerTxn>
+    <numKeyToAccessPerGrain>     1 </numKeyToAccessPerGrain>
+
+    <!-- ======================================================= -->
+
+    <MultiTransfer>             100 </MultiTransfer>
+    
+    <numPartitionPerSiloPerTxn> 1   </numPartitionPerSiloPerTxn>
+    <numSiloPerTxn>             2   </numSiloPerTxn>
+    <numRegionPerTxn>           1   </numRegionPerTxn>
+
+    <pactPercent>               50 </pactPercent>                   <!-- PACT% must be 0 with reference registered -->    
+    <multiSiloPercent>          100 </multiSiloPercent>
+    <multiRegionPercent>        0   </multiRegionPercent>
+
+    <!-- ======================================================= -->
+
+    <readKeyPercent>            0   </readKeyPercent>
+    <hotKeyPercent>             75  </hotKeyPercent>
+    <hotPercentPerGrain>        100 </hotPercentPerGrain>
+    <hotGrainPercent>           75  </hotGrainPercent>
+    <hotPercentPerPartition>    100 </hotPercentPerPartition>
+
+    <!-- ======================================================= -->
+
+    <actPipeSize>               128  </actPipeSize>
+    <pactPipeSize>              128  </pactPipeSize>
+    <numActConsumer>            1    </numActConsumer>
+    <numPactConsumer>           1    </numPactConsumer>
+</root>

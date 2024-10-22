@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <!-- ======================================================= -->
+    <numGrainPerTxn>            4   </numGrainPerTxn>
+
+    <!-- ======================================================= -->
+    <CollectBalance>            100 </CollectBalance>
+
+    <!-- ======================================================= -->
+    <numPartitionPerSiloPerTxn> 1   </numPartitionPerSiloPerTxn>
+    <numSiloPerTxn>             2   </numSiloPerTxn>
+
+    <!-- ======================================================= -->
+    <pactPercent>               50  </pactPercent>
+    <multiSiloPercent>          0   </multiSiloPercent>
+
+    <!-- ======================================================= -->
+    <hotGrainPercent>           100 </hotGrainPercent>
+    <hotPercentPerPartition>    100 </hotPercentPerPartition>
+
+    <!-- ======================================================= -->
+    <actPipeSize>               8   </actPipeSize>
+    <pactPipeSize>              8   </pactPipeSize>
+    <numActConsumer>            2   </numActConsumer>
+    <numPactConsumer>           2   </numPactConsumer>
+
+    <migrationPipeSize>         0   </migrationPipeSize>
+    <numMigrationConsumer>      0   </numMigrationConsumer>
+</root>

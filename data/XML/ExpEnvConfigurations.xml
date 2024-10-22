@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <runExperiment> 3 </runExperiment>
+
+    <experimentID id = '1'>
+        <isLocalTest>                    false     </isLocalTest>
+        <isGrainMigrationExp>            false     </isGrainMigrationExp>
+        <numRegion>                      1         </numRegion>
+        <numSiloPerRegion>               16        </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        16        </numReplicaSiloPerRegion>
+        <benchmark>                      SMALLBANK </benchmark>
+        <implementationType>             SNAPPERFINE </implementationType>
+        <doLogging>                      true      </doLogging>
+        <inRegionReplication>            false     </inRegionReplication>
+        <crossRegionReplication>         false     </crossRegionReplication>
+        <replicaWorkload>                false     </replicaWorkload>
+        <speculativeACT>                 false     </speculativeACT>
+        <speculativeBatch>               true      </speculativeBatch>
+        <globalBatchSizeInMSecs>         0         </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       20        </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          0         </localBatchSizeInMSecs>
+
+        <numMasterPartitionPerLocalSilo> 1    </numMasterPartitionPerLocalSilo>
+        <numGrainPerPartition>           1000 </numGrainPerPartition>
+        <numAccountPerGrain>             1000 </numAccountPerGrain>
+    </experimentID>
+
+    <experimentID id = '2'>
+        <isLocalTest>                    true,        true,        true,        true        </isLocalTest>
+        <isGrainMigrationExp>            false,       false,       false,       false       </isGrainMigrationExp>
+        <numRegion>                      1,           1,           1,           1           </numRegion>
+        <numSiloPerRegion>               2,           2,           2,           2           </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2,           2,           2,           2           </numReplicaSiloPerRegion>
+        <benchmark>                      SMALLBANK,   SMALLBANK,   SMALLBANK,   SMALLBANK   </benchmark>
+        <implementationType>             SNAPPERSIMPLE, SNAPPERFINE, SNAPPERFINE, SNAPPERFINE </implementationType>
+        <doLogging>                      false,        false,       false,       false       </doLogging>
+        <inRegionReplication>            false,       false,       false,       false       </inRegionReplication>
+        <crossRegionReplication>         false,       false,       false,       false       </crossRegionReplication>
+        <replicaWorkload>                false,       false,       false,       false       </replicaWorkload>
+        <speculativeACT>                 false,       false,       false,       false       </speculativeACT>
+        <speculativeBatch>               true,        true,        true,        true        </speculativeBatch>
+        <globalBatchSizeInMSecs>         0,           10,          10,          10          </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       20,          20,          20,          20          </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          0,           0,           0,           0           </localBatchSizeInMSecs>
+
+        <numMasterPartitionPerLocalSilo> 1,           1,           1,           1           </numMasterPartitionPerLocalSilo>
+        <numGrainPerPartition>           1000,         100,         100,         100         </numGrainPerPartition>
+        <numAccountPerGrain>             1000,           10,          100,         1000        </numAccountPerGrain>
+    </experimentID>
+
+    <experimentID id = '3'>
+        <isLocalTest>                    false,         false,       false       </isLocalTest>
+        <isGrainMigrationExp>            false,         false,       false       </isGrainMigrationExp>
+        <numRegion>                      1,             1,           1           </numRegion>
+        <numSiloPerRegion>               16,            16,          16          </numSiloPerRegion>
+        <numReplicaSiloPerRegion>        2,             2,           2           </numReplicaSiloPerRegion>
+        <benchmark>                      MARKETPLACE,   MARKETPLACE, MARKETPLACE </benchmark>
+        <implementationType>             SNAPPERSIMPLE, SNAPPER,     SNAPPERFINE </implementationType>
+        <doLogging>                      true,          true,        true        </doLogging>
+        <inRegionReplication>            false,         false,       false       </inRegionReplication>
+        <crossRegionReplication>         false,         false,       false       </crossRegionReplication>
+        <replicaWorkload>                false,         false,       false       </replicaWorkload>
+        <speculativeACT>                 false,         false,       false       </speculativeACT>
+        <speculativeBatch>               true,          true,        true        </speculativeBatch>
+        <globalBatchSizeInMSecs>         0,             0,           0           </globalBatchSizeInMSecs>
+        <regionalBatchSizeInMSecs>       20,            20,          20          </regionalBatchSizeInMSecs>
+        <localBatchSizeInMSecs>          0,             0,           0           </localBatchSizeInMSecs>
+
+        <numCityPerSilo>                 1      </numCityPerSilo>
+        <numCustomerPerCity>             100   </numCustomerPerCity>
+        <numSellerPerCity>               100   </numSellerPerCity>
+        <numProductPerSeller>            1000   </numProductPerSeller>
+
+        <numRegionPerSeller>             1      </numRegionPerSeller>
+        <numSiloPerSeller>               1      </numSiloPerSeller>
+        <numStockCityPerSeller>          1      </numStockCityPerSeller>
+        <numProductPerStockCity>         1000   </numProductPerStockCity>
+    
+        <initialNumProductPerCart>       0      </initialNumProductPerCart>
+
+        <maxPricePerProduct>             1000   </maxPricePerProduct>
+        <maxQuantityInStockPerProduct>   100000 </maxQuantityInStockPerProduct>
+    </experimentID>
+    
+</root>
